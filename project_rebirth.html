@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROJECT REBIRTH | Academic Comeback System</title>
+</head>
+<body>
+  <header id="top">
+    <h1>PROJECT REBIRTH</h1>
+    <p><strong>YOUR PERSONAL ACADEMIC COMEBACK SYSTEM</strong></p>
+    <p><em>Understand your weaknesses. Track your progress. Build your comeback.</em></p>
+    <hr>
+    <nav aria-label="Main navigation">
+      <a href="#dashboard">Mission Control</a> |
+      <a href="#study">Study Intelligence</a> |
+      <a href="#consultant">AI Consultancy</a> |
+      <a href="#vault">Problem Vault</a> |
+      <a href="#journey">Comeback Journey</a> |
+      <a href="#weekly">Weekly Review</a>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    <section id="dashboard">
+      <h2>MISSION CONTROL</h2>
+      <p><strong>Welcome back, Student.</strong></p>
+      <p>Your next chapter starts with the next action. Progress is built one focused session at a time.</p>
+      <h3>Today's Overview</h3>
+      <table border="1" cellpadding="8">
+        <thead><tr><th>Metric</th><th>Your entry</th><th>What it means</th></tr></thead>
+        <tbody>
+          <tr><td>Study time today</td><td>Not recorded yet</td><td>Log a session below</td></tr>
+          <tr><td>Active difficulties</td><td>Review Problem Vault</td><td>Keep track of unresolved issues</td></tr>
+          <tr><td>Today's mission</td><td>Choose a priority</td><td>Focus on one useful next step</td></tr>
+        </tbody>
+      </table>
+      <h3>Quick Access</h3>
+      <ul>
+        <li><a href="#study">Record a study session</a></li>
+        <li><a href="#consultant">Describe a struggle to the consultant</a></li>
+        <li><a href="#vault">Add a difficulty to the Problem Vault</a></li>
+        <li><a href="#journey">Set a comeback goal</a></li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section id="study">
+      <h2>STUDY INTELLIGENCE</h2>
+      <p>Record what you studied, how you studied, and how confident you feel afterwards.</p>
+      <form>
+        <fieldset>
+          <legend><strong>Log a Study Session</strong></legend>
+          <p><label for="study-date">Date:</label><br><input id="study-date" name="study-date" type="date"></p>
+          <p><label for="subject">Subject:</label><br>
+            <select id="subject" name="subject">
+              <option>Higher Mathematics</option><option>Physics</option><option>Chemistry</option>
+              <option>Biology</option><option>English</option><option>Bangla</option><option>ICT</option><option>Other</option>
+            </select>
+          </p>
+          <p><label for="chapter">Chapter or topic:</label><br><input id="chapter" name="chapter" type="text" placeholder="e.g. Complex Numbers"></p>
+          <p><label for="duration">Duration (minutes):</label><br><input id="duration" name="duration" type="number" min="1" placeholder="e.g. 60"></p>
+          <p><label for="method">Study method:</label><br>
+            <select id="method" name="method">
+              <option>Lecture</option><option>Independent problem-solving</option><option>Revision / active recall</option><option>MCQ practice</option><option>CQ practice</option><option>Mock test</option>
+            </select>
+          </p>
+          <p><label for="difficulty">How difficult did it feel?</label><br>
+            <select id="difficulty" name="difficulty"><option>Easy</option><option>Medium</option><option>Hard</option></select>
+          </p>
+          <p><label for="confidence">Confidence after studying (1–5):</label><br>
+            <select id="confidence" name="confidence"><option>1 — Very low</option><option>2 — Low</option><option>3 — Okay</option><option>4 — Good</option><option>5 — Very confident</option></select>
+          </p>
+          <p><label for="accuracy">Practice accuracy, if tested (%):</label><br><input id="accuracy" name="accuracy" type="number" min="0" max="100" placeholder="Optional"></p>
+          <p><label for="study-notes">Notes / what went well / what was difficult:</label><br><textarea id="study-notes" name="study-notes" rows="4" cols="50" placeholder="Write a short reflection..."></textarea></p>
+          <button type="submit">Submit Study Session</button>
+          <button type="reset">Clear Form</button>
+        </fieldset>
+      </form>
+      <p><strong>HTML-only note:</strong> This form is a prototype. Without a backend or JavaScript, submitting it will not store or analyse your session.</p>
+    </section>
+
+    <hr>
+
+    <section id="consultant">
+      <h2>AI CONSULTANCY</h2>
+      <p><strong>Your academic strategy desk</strong></p>
+      <p>Describe your struggle clearly. A future AI-connected version can compare your message with study history, confidence, and practice results to suggest a personalised plan.</p>
+      <form>
+        <fieldset>
+          <legend>Tell the Consultant What's Happening</legend>
+          <p><label for="struggle-type">What do you need help with?</label><br>
+            <select id="struggle-type" name="struggle-type">
+              <option>Understanding a topic</option><option>Forgetting formulas or reactions</option><option>Solving questions independently</option><option>Managing study time</option><option>Low motivation or consistency</option><option>Exam stress</option><option>Choosing what to study next</option><option>Other</option>
+            </select>
+          </p>
+          <p><label for="struggle-subject">Subject:</label><br>
+            <select id="struggle-subject" name="struggle-subject">
+              <option>Higher Mathematics</option><option>Physics</option><option>Chemistry</option><option>Biology</option><option>English</option><option>Bangla</option><option>ICT</option><option>General study habits</option>
+            </select>
+          </p>
+          <p><label for="struggle-detail">Explain the struggle:</label><br><textarea id="struggle-detail" name="struggle-detail" rows="6" cols="60" placeholder="What happens when you study? What have you tried? What result do you want?"></textarea></p>
+          <p><label for="desired-help">What kind of help would be useful?</label><br>
+            <select id="desired-help" name="desired-help"><option>A step-by-step action plan</option><option>Help finding the likely cause</option><option>A realistic timetable</option><option>Practice strategy</option><option>Encouragement and a reset plan</option></select>
+          </p>
+          <button type="submit">Request Consultation</button>
+          <button type="reset">Clear Form</button>
+        </fieldset>
+      </form>
+
+      <h3>Consultant's Planning Framework</h3>
+      <ol>
+        <li><strong>Understand:</strong> identify the exact problem and ask follow-up questions if needed.</li>
+        <li><strong>Analyse:</strong> review study method, time, confidence, and practice evidence.</li>
+        <li><strong>Recommend:</strong> suggest a small, realistic action plan.</li>
+        <li><strong>Review:</strong> return after trying the plan and update the outcome.</li>
+      </ol>
+      <h3>Example Advice Card</h3>
+      <blockquote>
+        <p><strong>Potential pattern:</strong> Understanding a lecture does not always mean you can retrieve and apply the idea independently.</p>
+        <p><strong>Try next:</strong> close your notes, attempt a few questions, check mistakes, and revisit the difficult ones later.</p>
+        <p><strong>Review:</strong> record how many you solved independently and update the related item in your Problem Vault.</p>
+      </blockquote>
+      <p><em>This is example guidance, not a live AI response. Real AI consultation requires a secure backend connected to an AI service.</em></p>
+    </section>
+
+    <hr>
+
+    <section id="vault">
+      <h2>THE PROBLEM VAULT</h2>
+      <p>Capture difficulties so they don't disappear from your attention. Review them later and record whether you've improved.</p>
+      <form>
+        <fieldset>
+          <legend>Add a Difficulty</legend>
+          <p><label for="problem-title">Problem title:</label><br><input id="problem-title" name="problem-title" type="text" placeholder="e.g. Can't solve Complex Number questions"></p>
+          <p><label for="problem-subject">Subject:</label><br>
+            <select id="problem-subject" name="problem-subject"><option>Higher Mathematics</option><option>Physics</option><option>Chemistry</option><option>Biology</option><option>English</option><option>Bangla</option><option>ICT</option><option>Other</option></select>
+          </p>
+          <p><label for="problem-chapter">Chapter / topic:</label><br><input id="problem-chapter" name="problem-chapter" type="text"></p>
+          <p><label for="problem-category">Problem category:</label><br>
+            <select id="problem-category" name="problem-category"><option>Conceptual understanding</option><option>Memory / recall</option><option>Problem-solving</option><option>Time management</option><option>Careless mistakes</option><option>Exam anxiety</option><option>Consistency</option><option>Other</option></select>
+          </p>
+          <p><label for="severity">Priority:</label><br><select id="severity" name="severity"><option>High</option><option>Medium</option><option>Low</option></select></p>
+          <p><label for="problem-date">Date identified:</label><br><input id="problem-date" name="problem-date" type="date"></p>
+          <p><label for="problem-description">Describe the difficulty:</label><br><textarea id="problem-description" name="problem-description" rows="4" cols="50"></textarea></p>
+          <p><label for="planned-action">Next action to try:</label><br><textarea id="planned-action" name="planned-action" rows="3" cols="50" placeholder="e.g. solve 5 questions without looking at solutions"></textarea></p>
+          <button type="submit">Add to Problem Vault</button>
+          <button type="reset">Clear Form</button>
+        </fieldset>
+      </form>
+
+      <h3>Update an Existing Difficulty</h3>
+      <form>
+        <fieldset>
+          <legend>Progress Update</legend>
+          <p><label for="update-problem">Problem title:</label><br><input id="update-problem" name="update-problem" type="text" placeholder="Enter the matching problem title"></p>
+          <p><label for="problem-status">Current status:</label><br>
+            <select id="problem-status" name="problem-status"><option>Still struggling</option><option>Improving</option><option>Resolved</option></select>
+          </p>
+          <p><label for="update-date">Update date:</label><br><input id="update-date" name="update-date" type="date"></p>
+          <p><label for="evidence">What evidence shows your progress?</label><br><textarea id="evidence" name="evidence" rows="4" cols="50" placeholder="e.g. I solved 7 out of 10 questions independently"></textarea></p>
+          <p><label for="next-review">Next review date (if still active):</label><br><input id="next-review" name="next-review" type="date"></p>
+          <button type="submit">Update Progress</button>
+          <button type="reset">Clear Form</button>
+        </fieldset>
+      </form>
+
+      <h3>Problem Status Guide</h3>
+      <ul>
+        <li><strong>Still struggling:</strong> the problem remains and needs a different approach or more support.</li>
+        <li><strong>Improving:</strong> progress is visible, but the student still needs practice.</li>
+        <li><strong>Resolved:</strong> the student can demonstrate the skill independently, not just recognise a solution.</li>
+      </ul>
+      <p><strong>Remember:</strong> In this HTML-only prototype, entries are not saved. A later JavaScript and storage version can make the vault functional.</p>
+    </section>
+
+    <hr>
+
+    <section id="journey">
+      <h2>THE COMEBACK JOURNEY</h2>
+      <p>Turn a broad ambition into a clear, measurable mission.</p>
+      <form>
+        <fieldset>
+          <legend>Create a Mission</legend>
+          <p><label for="goal-title">Mission title:</label><br><input id="goal-title" name="goal-title" type="text" placeholder="e.g. Improve independent maths practice"></p>
+          <p><label for="goal-reason">Why does this matter?</label><br><textarea id="goal-reason" name="goal-reason" rows="3" cols="50"></textarea></p>
+          <p><label for="goal-start">Start date:</label><br><input id="goal-start" name="goal-start" type="date"></p>
+          <p><label for="goal-deadline">Target date:</label><br><input id="goal-deadline" name="goal-deadline" type="date"></p>
+          <p><label for="goal-success">How will you measure success?</label><br><textarea id="goal-success" name="goal-success" rows="3" cols="50" placeholder="Use evidence, e.g. solve 20 selected questions independently"></textarea></p>
+          <button type="submit">Create Mission</button>
+          <button type="reset">Clear Form</button>
+        </fieldset>
+      </form>
+
+      <h3>Personal Reflection</h3>
+      <form>
+        <fieldset>
+          <legend>Private Journal Entry</legend>
+          <p><label for="reflection-date">Date:</label><br><input id="reflection-date" name="reflection-date" type="date"></p>
+          <p><label for="reflection">What went well? What was hard? What will you change tomorrow?</label><br><textarea id="reflection" name="reflection" rows="6" cols="60"></textarea></p>
+          <button type="submit">Save Reflection</button>
+          <button type="reset">Clear Form</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <hr>
+
+    <section id="weekly">
+      <h2>WEEKLY REVIEW</h2>
+      <p>Use this review at the end of each week to make a thoughtful plan for the next one.</p>
+      <form>
+        <fieldset>
+          <legend>Weekly Check-in</legend>
+          <p><label for="week-hours">Total study hours this week:</label><br><input id="week-hours" name="week-hours" type="number" min="0" step="0.5"></p>
+          <p><label for="best-subject">Subject that improved most:</label><br><input id="best-subject" name="best-subject" type="text"></p>
+          <p><label for="hardest-subject">Subject needing most attention:</label><br><input id="hardest-subject" name="hardest-subject" type="text"></p>
+          <p><label for="resolved-count">Difficulties resolved this week:</label><br><input id="resolved-count" name="resolved-count" type="number" min="0"></p>
+          <p><label for="weekly-win">Biggest win:</label><br><textarea id="weekly-win" name="weekly-win" rows="3" cols="50"></textarea></p>
+          <p><label for="weekly-adjustment">One change for next week:</label><br><textarea id="weekly-adjustment" name="weekly-adjustment" rows="3" cols="50"></textarea></p>
+          <button type="submit">Submit Weekly Review</button>
+          <button type="reset">Clear Form</button>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <hr>
+  <footer>
+    <h2>MISSION STATUS: IN PROGRESS</h2>
+    <p>You don't need a perfect day. You need a useful next step.</p>
+    <p><a href="#top">Back to top ↑</a></p>
+    <p><small>PROJECT REBIRTH · HTML-only prototype · Built as a learning project</small></p>
+  </footer>
+</body>
+</html>
